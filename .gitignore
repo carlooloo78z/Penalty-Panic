@@ -1,0 +1,6 @@
+.backups/
+.qa-browser/
+.qa-chrome/
+.qa-chrome.log
+qa/
+node_modules/

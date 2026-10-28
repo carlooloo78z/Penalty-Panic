@@ -1,0 +1,13 @@
+{
+  "name": "penalty-panic",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A local-first arcade penalty game with gravity, reactive keepers and saved progression.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test tests.cjs ui.test.cjs arcade.test.cjs victory.test.cjs league.test.cjs field.test.cjs competitions.test.cjs save-window.test.cjs commentary.test.cjs squad.test.cjs",
+    "check": "node check.cjs",
+    "test:browser": "node browser-qa.cjs"
+  }
+}
