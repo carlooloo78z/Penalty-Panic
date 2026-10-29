@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c1c28">
+  <meta name="description" content="Own the moment in PENALTY PANIC. Arcade shootouts, goalkeeper challenges and a career from rookie to legend.">
+  <title>PENALTY PANIC — Own the moment</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="league.css">
+  <link rel="stylesheet" href="field.css">
+  <link rel="stylesheet" href="competition.css">
+  <link rel="stylesheet" href="accounts.css">
+</head>
+<body>
+  <header class="app-header">
+    <button class="brand" data-action="menu" aria-label="PENALTY PANIC main menu"><span class="brand-mark">✦</span>PENALTY<span>PANIC</span></button>
+    <div class="profile-tools">
+      <button id="account-button" class="account-button" data-action="accounts" aria-label="Accounts"><span>ACCOUNTS</span><small id="account-name">Player 1</small></button>
+      <button class="profile-link" data-action="profile"><strong id="player-title">ROOKIE SPECIALIST</strong><small id="level">LEVEL 1</small></button>
+      <button class="coin-button" data-action="shop" aria-label="Open locker room and spend coins"><span id="coins">◉ 120</span></button>
+      <button class="icon-button" data-action="settings" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+  <main id="screen"></main>
+  <main id="play" class="play-shell" hidden aria-label="Penalty gameplay">
+    <div id="hud" class="match-hud"></div>
+    <aside id="commentary" class="match-commentary" hidden aria-label="Live match commentary"><strong>MAX VALE <span>COMMENTARY</span></strong><p id="commentary-text" role="status" aria-live="polite" aria-atomic="true"></p></aside>
+    <div class="arena-wrap"><canvas id="stadium" tabindex="0" aria-label="Goal aiming area. Click to lock a shot target or dive to that point. Use arrow keys to aim. Keeper controls are below."></canvas>
+      <section id="victory-overlay" class="victory-overlay" hidden aria-label="Victory celebration">
+        <div class="victory-top"><span id="victory-stage">FULL TIME</span><button class="secondary victory-skip" data-action="skip-victory" aria-label="Skip victory cutscene and view results">SKIP CUTSCENE →</button></div>
+        <div id="victory-caption" class="victory-caption"><span id="victory-club" class="eyebrow"></span><h2 id="victory-title">VICTORY</h2><p><strong id="victory-score"></strong><span id="victory-opponent"></span></p><small>Space / Enter / Esc to skip</small></div>
+        <div class="victory-progress" aria-hidden="true"><span id="victory-progress"></span></div>
+      </section>
+    </div>
+    <div id="controls"></div>
+    <div id="lineups"></div>
+  </main>
+  <footer class="app-footer"><span id="save-status">Saved on this device</span><button data-action="profile" class="quiet">PLAYER PROFILE</button><button data-action="help" class="quiet">CONTROLS & HELP ↗</button></footer>
+  <dialog id="modal" aria-labelledby="dialog-title"></dialog>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="toast" role="status"></div>
+  <script src="catalog.js"></script><script src="field.js"></script><script src="tournament.js"></script><script src="competitions.js"></script><script src="roster.js"></script><script src="progression.js"></script><script src="storage.js"></script>
+  <script src="accounts.js"></script><script src="simulation.js"></script><script src="player-motion.js"></script><script src="renderer.js"></script><script src="field-view.js"></script><script src="audio.js"></script>
+  <script src="commentary.js"></script><script src="screens.js"></script><script src="club-ui.js"></script><script src="arcade-ui.js"></script><script src="league-ui.js"></script><script src="field-ui.js"></script><script src="competition-ui.js"></script><script src="squad-ui.js"></script><script src="account-ui.js"></script><script src="input.js"></script><script src="app.js"></script>
+</body>
+</html>
